@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+  h3{
+    font-family: Arial;
+    color: white;
+    font-size: 32px;
+  }
+
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+h1{
+    font-family: arial;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+  }
+
+  h2{
+    font-family: arial;
+    font-size: 24px;
+    color: lightcoral;
+    text-align: left;
+    text-indent: 150px;
+  }
+
+  p{
+    font-family: calibri;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  background-image: url('Shop.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+#Home {background-color: black;}
+#Profile {background-color: lightblue;}
+#Education {background-color: darkcyan;}
+#Contact {background-color: darkgoldenrod;}
+</style>
+</head>
+<body>
+   
+<div class="banner-image">
+  <div class="banner-text">
+    <h1 style="font-size:40px">My Online Portfolio</h1>
+    <p1>Welcome</p1>
+  </div>
+</div>
+    
+<div id="nav">
+    <div id="nav_wrapper">
+        <ul>
+            <li><a href="index.html">Home</a>
+            </li>
+            <li> <a href="">Activities</a>
+
+                <ul>
+                    <li><a href="Resume.html">Activity 1</a>
+                    </li>
+                    <li><a href="Black Goose.html">Activity 2</a>
+                    </li>
+                    <li><a href="Beef Caldereta.html">Activity 3</a>
+                    </li>
+                    <li><a href="Song-Lyrics.html">Activity 4</a>
+                    </li>
+                    <li><a href="Coffee Shop.html">Activity 5</a>
+                    </li>
+                    <li><a href="Presidents of the Philippines Album.html">Activity 6</a>
+                    </li>
+                    <li><a href="Bio Data Form.html">Activity 7</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li> <a href="Articles.html">Articles</a>
+            </li>
+            <li> <a href="Contact Us.html">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+
+<button class="tablink" onclick="openPage('Home', this, 'black')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Profile', this, 'lightblue')" id="defaultOpen">Profile</button>
+<button class="tablink" onclick="openPage('Education', this, 'darkcyan')"id="defaultOpen">Education</button>
+<button class="tablink" onclick="openPage('Contact', this, 'darkgoldenrod')"id="defaultOpen">Contact</button>
+
+<div id="Home" class="tabcontent">
+
+<h1><b>Welcome to JM's Coffee Shop</b></h1>
+  <h2>OUR VISION</h2>
+  <p>To be the best Coffee Roaster as we can be and purveyor of gourmet coffees<br> 
+    and food service products around the world by offering the guiding<br> 
+    principles of integrity, quality, service and relationship. and just<br> 
+    as hard to sleep after.</p>
+  
+  <h2>OUR MISSION</h2>
+  <p>Serving with pride and working with Passion to deliver the JM's Coffee Shop Promise.</p>
+
+  <h2>CORE VALUES</h2>
+  <p>Respecting one another and creating a harmonious Coffee Shop environment<br>
+    Delivering our uncompromising Integrity, Quality, and Service with a Smile.<br>
+    Always staying relevant and ahead of the rest.<br>
+    Providing the best in everything we do.<br></p>    
+
+
+</head>
+</html>
+
+</div>
+
+<div id="Profile" class="tabcontent">
+  <h3><a href="profile.html" target="_blank">Profile</h3>
+</div>
+
+<div id="Education" class="tabcontent">
+  <h3><a href="education.html" target="_blank">Education</a></h3>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3><a href="contact.html" target="_blank">Contact</a></h3>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+<footer>
+  <p>&copy;2021 Mark Jordanniele G. Magalona<br>
+  <a href="mailto:magalonajordan62@gmail.com">magalonajordan62@gmail.com</a></p>
+</footer>
+
+
+</body>
+</html> 
